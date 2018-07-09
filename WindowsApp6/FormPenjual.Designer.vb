@@ -322,7 +322,7 @@ Partial Class FormPenjual
         '
         Me.filterTrans.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.filterTrans.FormattingEnabled = True
-        Me.filterTrans.Items.AddRange(New Object() {"All", "Waiting for Verification", "Verification Success", "Processed by Seller", "Canceled by Seller", "Shipped", "Delivered"})
+        Me.filterTrans.Items.AddRange(New Object() {"All", "Verification Success", "Processed by Seller", "Canceled by Seller", "Shipped", "Delivered"})
         Me.filterTrans.Location = New System.Drawing.Point(37, 2)
         Me.filterTrans.Name = "filterTrans"
         Me.filterTrans.Size = New System.Drawing.Size(216, 29)

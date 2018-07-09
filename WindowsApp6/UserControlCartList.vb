@@ -15,7 +15,7 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         updateJmlCart(+1, Me.Name)
         Using db As New OnlineShopEntity
-            Dim result = db.carts.First(Function(i) i.id_barang = Me.Name And i.id_pembeli = My.Settings.idUser And i.status = 0)
+            Dim result = db.carts.First(Function(i) i.id_barang = Me.Name And i.id_pembeli = My.Settings.idUser And i.status = 0 And i.id_transaksi = vbNullString)
             Dim bd = db.barangdagangans.FirstOrDefault(Function(i) i.id_barang = result.id_barang)
             jumlah.Text = result.jumlah
             price.Text = formatHarga(result.jumlah * bd.harga)
@@ -27,7 +27,7 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         updateJmlCart(-1, Me.Name)
         Using db As New OnlineShopEntity
-            Dim result = db.carts.First(Function(i) i.id_barang = Me.Name And i.id_pembeli = My.Settings.idUser And i.status = 0)
+            Dim result = db.carts.First(Function(i) i.id_barang = Me.Name And i.id_pembeli = My.Settings.idUser And i.status = 0 And i.id_transaksi = vbNullString)
             Dim bd = db.barangdagangans.FirstOrDefault(Function(i) i.id_barang = result.id_barang)
             jumlah.Text = result.jumlah
             price.Text = formatHarga(result.jumlah * bd.harga)

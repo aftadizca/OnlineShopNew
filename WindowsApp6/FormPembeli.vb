@@ -9,7 +9,7 @@
             'jika cari Tb kosong
             If searchItem.Text = "" Then
                 If filterItem.Text = "ALL" Then
-                    result = db.barangdagangans.ToList()
+                    result = result
                 ElseIf filterItem.Text = "CHEAPEST" Then
                     result = result.OrderBy(Function(i) i.harga).ToList()
                 Else
@@ -17,7 +17,7 @@
                 End If
             Else
                 If filterItem.Text = "ALL" Then
-                    result = db.barangdagangans.Where(Function(i) i.nama_barang.ToLower.Contains(search.ToLower)).ToList()
+                    result = result.Where(Function(i) i.nama_barang.ToLower.Contains(search.ToLower)).ToList()
                 ElseIf filterItem.Text = "CHEAPEST" Then
                     result = result.Where(Function(i) i.nama_barang.ToLower.Contains(search.ToLower)).OrderBy(Function(i) i.harga).ToList()
                 Else
@@ -120,10 +120,12 @@
                     .tanggal.Text = i.tanggal
                     .resi.Text = i.resi
                     .status.Text = getStatus(i.status)
-                    If i.status = 1 Or i.status = 2 Or i.status = 3 Or i.status = 12 Or i.status = 5 Then
-                        uc.ButtonReceived.Visible = False
-                    Else
+                    .Tag = My.Settings.Type
+                    If i.status = 4 Then
                         uc.ButtonReceived.Visible = True
+                        uc.ButtonReceived.Text = "RECEIVE"
+                    Else
+                        uc.ButtonReceived.Visible = False
                     End If
                 End With
                 transFP.Controls.Add(uc)

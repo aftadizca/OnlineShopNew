@@ -36,31 +36,39 @@
                 result = (From cart In db.carts
                           From trans In db.transactions
                           From bd In db.barangdagangans
-                          Where trans.id_transaksi = cart.id_transaksi And cart.id_pembeli = My.Settings.idUser And cart.status >= 1 And bd.id_barang = cart.id_barang
-                          Select New With {.id_penjual = bd.id_penjual, .id_transaksi = trans.id_transaksi, .tanggal = trans.tanggal, .resi = cart.resi, .status = cart.status}).Distinct()
+                          Where trans.id_transaksi = cart.id_transaksi And bd.id_penjual = My.Settings.idUser And cart.status >= 2 And bd.id_barang = cart.id_barang
+                          Select New With {.id_pembeli = cart.id_pembeli, .id_transaksi = trans.id_transaksi, .tanggal = trans.tanggal, .resi = cart.resi, .status = cart.status}).Distinct()
             Else
                 Dim statusid = getStatusInt(status)
                 result = (From cart In db.carts
                           From trans In db.transactions
                           From bd In db.barangdagangans
-                          Where trans.id_transaksi = cart.id_transaksi And cart.id_pembeli = My.Settings.idUser And cart.status = statusid And bd.id_barang = cart.id_barang
-                          Select New With {.id_penjual = bd.id_penjual, .id_transaksi = trans.id_transaksi, .tanggal = trans.tanggal, .resi = cart.resi, .status = cart.status}).Distinct()
+                          Where trans.id_transaksi = cart.id_transaksi And bd.id_penjual = My.Settings.idUser And cart.status = statusid And bd.id_barang = cart.id_barang
+                          Select New With {.id_pembeli = cart.id_pembeli, .id_transaksi = trans.id_transaksi, .tanggal = trans.tanggal, .resi = cart.resi, .status = cart.status}).Distinct()
             End If
 
 
             For Each i In result
                 Dim uc As New UserControlTrans
                 With uc
-                    .Name = i.id_penjual
-                    .namaToko.Text = getUserName(i.id_penjual)
+                    .Name = i.id_pembeli
+                    .namaToko.Text = getUserName(i.id_pembeli)
                     .idTransaksi.Text = i.id_transaksi
                     .tanggal.Text = i.tanggal
                     .resi.Text = i.resi
                     .status.Text = getStatus(i.status)
-                    If i.status = 1 Or i.status = 2 Or i.status = 3 Or i.status = 12 Or i.status = 5 Then
-                        uc.ButtonReceived.Visible = False
-                    Else
+                    .Tag = My.Settings.Type
+                    If i.status = 2 Then
                         uc.ButtonReceived.Visible = True
+                        uc.ButtonReceived.Text = "PROCESS"
+                    ElseIf i.status = 3 Then
+                        uc.ButtonReceived.Visible = True
+                        uc.ButtonReceived.Text = "SEND"
+                    ElseIf i.status = 4 Then
+                        uc.ButtonReceived.Visible = True
+                        uc.ButtonReceived.Text = "EDIT RESI"
+                    Else
+                        uc.ButtonReceived.Visible = False
                     End If
                 End With
                 transFP.Controls.Add(uc)

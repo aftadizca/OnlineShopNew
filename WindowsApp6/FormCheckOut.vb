@@ -25,14 +25,14 @@
         End Using
     End Sub
 
-    Public Sub loadListCart(ByVal id_penjual As String, ByVal id_pembeli As String)
+    Public Sub loadListCartPenjual(ByVal id_transaksi As String)
         Using db As New OnlineShopEntity
             checkoutDetailFP.Controls.Clear()
             Dim result = (From cart In db.carts
                           From bd In db.barangdagangans
-                          Where bd.id_barang = cart.id_barang And cart.id_pembeli = My.Settings.idUser And cart.status = 0 And bd.id_penjual = id_penjual
+                          Where cart.id_transaksi = id_transaksi And bd.id_barang = cart.id_barang And bd.id_penjual = My.Settings.idUser
                           Select New With {.id_barang = cart.id_barang, .id_penjual = bd.id_penjual, .nama_barang = bd.nama_barang, .jumlah = cart.jumlah, .harga = bd.harga * cart.jumlah, .image = bd.image, .deskripsi = bd.deskripsi}).ToList()
-
+            Dim harga As Long = 0
             For Each item In result
                 Dim UCItem As New UserControlCartList
                 UCItem.Name = item.id_barang
@@ -46,7 +46,36 @@
                 UCItem.Button1.Visible = False
                 UCItem.addCart.Visible = False
                 checkoutDetailFP.Controls.Add(UCItem)
+                harga += item.jumlah * item.harga
             Next
+            total.Text = formatHarga(harga)
+        End Using
+    End Sub
+
+    Public Sub loadListCart(ByVal id_penjual As String, ByVal id_transaksi As String)
+        Using db As New OnlineShopEntity
+            checkoutDetailFP.Controls.Clear()
+            Dim result = (From cart In db.carts
+                          From bd In db.barangdagangans
+                          Where cart.id_transaksi = id_transaksi And bd.id_barang = cart.id_barang And bd.id_penjual = id_penjual
+                          Select New With {.id_barang = cart.id_barang, .id_penjual = bd.id_penjual, .nama_barang = bd.nama_barang, .jumlah = cart.jumlah, .harga = bd.harga * cart.jumlah, .image = bd.image, .deskripsi = bd.deskripsi}).ToList()
+            Dim harga As Long = 0
+            For Each item In result
+                Dim UCItem As New UserControlCartList
+                UCItem.Name = item.id_barang
+                UCItem.nameGood.Text = item.nama_barang
+                UCItem.price.Text = formatHarga(item.harga)
+                UCItem.pic.ImageLocation = item.image
+                UCItem.shopName.Text = getUserName(item.id_penjual)
+                UCItem.RichTextBox1.Text = item.deskripsi
+                UCItem.jumlah.Text = item.jumlah
+                UCItem.Button2.Visible = False
+                UCItem.Button1.Visible = False
+                UCItem.addCart.Visible = False
+                checkoutDetailFP.Controls.Add(UCItem)
+                harga += item.jumlah * item.harga
+            Next
+            total.Text = formatHarga(harga)
         End Using
     End Sub
 
@@ -56,7 +85,6 @@
         ElseIf Me.Text.Contains("PAYMENT") Then
             loadListCart(Me.Text.Replace(" - PAYMENT", ""))
         End If
-
     End Sub
 
     Private Sub buttonCheckout_Click(sender As Object, e As EventArgs) Handles buttonCheckout.Click
