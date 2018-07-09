@@ -36,7 +36,7 @@
                         uc.ButtonVerify.Enabled = True
                     Else
                         uc.ButtonVerify.Enabled = False
-                        uc.ButtonVerify.Text = "Verified"
+                        uc.ButtonVerify.Text = "VERIFIED"
                     End If
                 End With
                 transFP.Controls.Add(uc)
