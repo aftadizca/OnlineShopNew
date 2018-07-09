@@ -114,6 +114,7 @@ Partial Class UserControlAdmin
         Me.ButtonVerify.FlatAppearance.BorderSize = 0
         Me.ButtonVerify.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PowderBlue
         Me.ButtonVerify.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonVerify.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonVerify.ForeColor = System.Drawing.Color.White
         Me.ButtonVerify.Location = New System.Drawing.Point(193, 209)
         Me.ButtonVerify.Name = "ButtonVerify"

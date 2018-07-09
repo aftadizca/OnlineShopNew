@@ -59,6 +59,7 @@ Partial Class FormPembeli
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.transFP = New System.Windows.Forms.FlowLayoutPanel()
         Me.UserControlTrans1 = New WindowsApp6.UserControlTrans()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -78,6 +79,7 @@ Partial Class FormPembeli
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Panel9)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
@@ -94,9 +96,9 @@ Partial Class FormPembeli
         '
         Me.Panel9.BackgroundImage = Global.WindowsApp6.My.Resources.Resources.MaleUser
         Me.Panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel9.Location = New System.Drawing.Point(838, 12)
+        Me.Panel9.Location = New System.Drawing.Point(822, 12)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(32, 33)
+        Me.Panel9.Size = New System.Drawing.Size(48, 48)
         Me.Panel9.TabIndex = 4
         '
         'Label2
@@ -136,7 +138,7 @@ Partial Class FormPembeli
         Me.MenuStrip1.BackColor = System.Drawing.Color.White
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsernameDisplay})
-        Me.MenuStrip1.Location = New System.Drawing.Point(633, 12)
+        Me.MenuStrip1.Location = New System.Drawing.Point(617, 12)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
         Me.MenuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -488,6 +490,18 @@ Partial Class FormPembeli
         Me.UserControlTrans1.Size = New System.Drawing.Size(270, 158)
         Me.UserControlTrans1.TabIndex = 0
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.SteelBlue
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(767, 45)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(41, 15)
+        Me.Label4.TabIndex = 9
+        Me.Label4.Text = "BUYER"
+        '
         'FormPembeli
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -559,4 +573,5 @@ Partial Class FormPembeli
     Friend WithEvents UsernameDisplay As ToolStripMenuItem
     Friend WithEvents MYACCOUNTToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LOGOUTToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label4 As Label
 End Class

@@ -37,6 +37,7 @@
                     Else
                         uc.ButtonVerify.Enabled = False
                         uc.ButtonVerify.Text = "VERIFIED"
+                        uc.ButtonVerify.BackColor = Color.Green
                     End If
                 End With
                 transFP.Controls.Add(uc)
@@ -95,5 +96,9 @@
 
     Private Sub FormAdmin_FormClosed_1(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Application.Exit()
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
     End Sub
 End Class

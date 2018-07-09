@@ -36,8 +36,9 @@ Partial Class FormAdmin
         Me.filterTrans = New System.Windows.Forms.ComboBox()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.transFP = New System.Windows.Forms.FlowLayoutPanel()
-        Me.UserControlAdmin1 = New WindowsApp6.UserControlAdmin()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.UserControlAdmin1 = New WindowsApp6.UserControlAdmin()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.TabPage4.SuspendLayout()
@@ -49,6 +50,7 @@ Partial Class FormAdmin
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Panel9)
         Me.Panel1.Controls.Add(Me.MenuStrip1)
         Me.Panel1.Controls.Add(Me.Label2)
@@ -65,9 +67,9 @@ Partial Class FormAdmin
         '
         Me.Panel9.BackgroundImage = Global.WindowsApp6.My.Resources.Resources.MaleUser
         Me.Panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel9.Location = New System.Drawing.Point(837, 12)
+        Me.Panel9.Location = New System.Drawing.Point(821, 12)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(32, 33)
+        Me.Panel9.Size = New System.Drawing.Size(48, 48)
         Me.Panel9.TabIndex = 6
         '
         'MenuStrip1
@@ -76,7 +78,7 @@ Partial Class FormAdmin
         Me.MenuStrip1.BackColor = System.Drawing.Color.White
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsernameDisplay})
-        Me.MenuStrip1.Location = New System.Drawing.Point(632, 12)
+        Me.MenuStrip1.Location = New System.Drawing.Point(613, 12)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
         Me.MenuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -190,16 +192,6 @@ Partial Class FormAdmin
         Me.transFP.Size = New System.Drawing.Size(866, 355)
         Me.transFP.TabIndex = 0
         '
-        'UserControlAdmin1
-        '
-        Me.UserControlAdmin1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.UserControlAdmin1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UserControlAdmin1.Location = New System.Drawing.Point(9, 9)
-        Me.UserControlAdmin1.Name = "UserControlAdmin1"
-        Me.UserControlAdmin1.Padding = New System.Windows.Forms.Padding(3)
-        Me.UserControlAdmin1.Size = New System.Drawing.Size(270, 239)
-        Me.UserControlAdmin1.TabIndex = 0
-        '
         'TabControl1
         '
         Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -213,6 +205,28 @@ Partial Class FormAdmin
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(880, 433)
         Me.TabControl1.TabIndex = 3
+        '
+        'UserControlAdmin1
+        '
+        Me.UserControlAdmin1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.UserControlAdmin1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UserControlAdmin1.Location = New System.Drawing.Point(9, 9)
+        Me.UserControlAdmin1.Name = "UserControlAdmin1"
+        Me.UserControlAdmin1.Padding = New System.Windows.Forms.Padding(3)
+        Me.UserControlAdmin1.Size = New System.Drawing.Size(270, 239)
+        Me.UserControlAdmin1.TabIndex = 0
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.SteelBlue
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(761, 45)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(44, 15)
+        Me.Label3.TabIndex = 8
+        Me.Label3.Text = "ADMIN"
         '
         'FormAdmin
         '
@@ -254,4 +268,5 @@ Partial Class FormAdmin
     Friend WithEvents UsernameDisplay As ToolStripMenuItem
     Friend WithEvents MYACCOUNTToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LOGOUTToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label3 As Label
 End Class
