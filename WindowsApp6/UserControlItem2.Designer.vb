@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class UserControlItem
+Partial Class UserControlItem2
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
@@ -22,16 +22,17 @@ Partial Class UserControlItem
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserControlItem))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserControlItem2))
         Me.nameGood = New System.Windows.Forms.Label()
         Me.shopName = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.addCart = New System.Windows.Forms.Button()
+        Me.delete = New System.Windows.Forms.Button()
+        Me.edit = New System.Windows.Forms.Button()
         Me.detail = New System.Windows.Forms.Button()
         Me.price = New System.Windows.Forms.Label()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.pic = New System.Windows.Forms.PictureBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.pic, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -66,28 +67,45 @@ Partial Class UserControlItem
         'Panel1
         '
         Me.Panel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel1.Controls.Add(Me.addCart)
+        Me.Panel1.Controls.Add(Me.delete)
+        Me.Panel1.Controls.Add(Me.edit)
         Me.Panel1.Controls.Add(Me.detail)
-        Me.Panel1.Location = New System.Drawing.Point(270, 111)
+        Me.Panel1.Location = New System.Drawing.Point(240, 111)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(76, 30)
+        Me.Panel1.Size = New System.Drawing.Size(106, 30)
         Me.Panel1.TabIndex = 3
         '
-        'addCart
+        'delete
         '
-        Me.addCart.BackColor = System.Drawing.Color.Transparent
-        Me.addCart.BackgroundImage = Global.WindowsApp6.My.Resources.Resources.AddCart
-        Me.addCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.addCart.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.addCart.FlatAppearance.BorderSize = 0
-        Me.addCart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PowderBlue
-        Me.addCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.addCart.Location = New System.Drawing.Point(40, 3)
-        Me.addCart.Name = "addCart"
-        Me.addCart.Size = New System.Drawing.Size(31, 24)
-        Me.addCart.TabIndex = 0
-        Me.addCart.Tag = "cart"
-        Me.addCart.UseVisualStyleBackColor = False
+        Me.delete.BackColor = System.Drawing.Color.Transparent
+        Me.delete.BackgroundImage = Global.WindowsApp6.My.Resources.Resources.Trash
+        Me.delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.delete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.delete.FlatAppearance.BorderSize = 0
+        Me.delete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PowderBlue
+        Me.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.delete.Location = New System.Drawing.Point(78, 3)
+        Me.delete.Name = "delete"
+        Me.delete.Size = New System.Drawing.Size(24, 24)
+        Me.delete.TabIndex = 2
+        Me.delete.Tag = "cart"
+        Me.delete.UseVisualStyleBackColor = False
+        '
+        'edit
+        '
+        Me.edit.BackColor = System.Drawing.Color.Transparent
+        Me.edit.BackgroundImage = Global.WindowsApp6.My.Resources.Resources.Edit
+        Me.edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.edit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.edit.FlatAppearance.BorderSize = 0
+        Me.edit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PowderBlue
+        Me.edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.edit.Location = New System.Drawing.Point(44, 3)
+        Me.edit.Name = "edit"
+        Me.edit.Size = New System.Drawing.Size(24, 24)
+        Me.edit.TabIndex = 0
+        Me.edit.Tag = "cart"
+        Me.edit.UseVisualStyleBackColor = False
         '
         'detail
         '
@@ -120,27 +138,6 @@ Partial Class UserControlItem
         Me.price.Text = "Rp. 125633333"
         Me.price.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Panel2
-        '
-        Me.Panel2.BackgroundImage = Global.WindowsApp6.My.Resources.Resources.SmallBusiness_512px
-        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel2.Location = New System.Drawing.Point(9, 123)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(18, 18)
-        Me.Panel2.TabIndex = 5
-        '
-        'pic
-        '
-        Me.pic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pic.Image = Global.WindowsApp6.My.Resources.Resources.RemoveImage_512px
-        Me.pic.Location = New System.Drawing.Point(9, 9)
-        Me.pic.Name = "pic"
-        Me.pic.Size = New System.Drawing.Size(107, 108)
-        Me.pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pic.TabIndex = 0
-        Me.pic.TabStop = False
-        '
         'RichTextBox1
         '
         Me.RichTextBox1.BackColor = System.Drawing.Color.LightSteelBlue
@@ -155,7 +152,27 @@ Partial Class UserControlItem
         Me.RichTextBox1.TabIndex = 6
         Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
         '
-        'UserControlItem
+        'Panel2
+        '
+        Me.Panel2.BackgroundImage = Global.WindowsApp6.My.Resources.Resources.SmallBusiness_512px
+        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel2.Location = New System.Drawing.Point(9, 123)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(18, 18)
+        Me.Panel2.TabIndex = 5
+        '
+        'pic
+        '
+        Me.pic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pic.Location = New System.Drawing.Point(9, 9)
+        Me.pic.Name = "pic"
+        Me.pic.Size = New System.Drawing.Size(107, 108)
+        Me.pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pic.TabIndex = 0
+        Me.pic.TabStop = False
+        '
+        'UserControlItem2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
@@ -169,7 +186,7 @@ Partial Class UserControlItem
         Me.Controls.Add(Me.nameGood)
         Me.Controls.Add(Me.pic)
         Me.Margin = New System.Windows.Forms.Padding(6)
-        Me.Name = "UserControlItem"
+        Me.Name = "UserControlItem2"
         Me.Padding = New System.Windows.Forms.Padding(6)
         Me.Size = New System.Drawing.Size(358, 149)
         Me.Panel1.ResumeLayout(False)
@@ -184,7 +201,8 @@ Partial Class UserControlItem
     Friend WithEvents Panel1 As Panel
     Friend WithEvents price As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents addCart As Button
+    Friend WithEvents edit As Button
     Friend WithEvents detail As Button
     Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents delete As Button
 End Class

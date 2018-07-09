@@ -20,4 +20,8 @@
             End With
         End Using
     End Sub
+
+    Private Sub ButtonReceived_Click(sender As Object, e As EventArgs) Handles ButtonReceived.Click
+
+    End Sub
 End Class

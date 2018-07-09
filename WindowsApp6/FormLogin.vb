@@ -15,6 +15,7 @@ Public Class FormLogin
             ElseIf My.Settings.Type = "ADMIN" Then
                 FormAdmin.ShowDialog()
             ElseIf My.Settings.Type = "SELLER" Then
+                FormPenjual.ShowDialog()
             End If
 
         End If
@@ -44,6 +45,7 @@ Public Class FormLogin
                     ElseIf loginAsComboBox.Text = "ADMIN" Then
                         FormAdmin.ShowDialog()
                     ElseIf loginAsComboBox.Text = "SELLER" Then
+                        FormPenjual.ShowDialog()
                     End If
                 Else
                     MessageBox.Show("Login Gagal")

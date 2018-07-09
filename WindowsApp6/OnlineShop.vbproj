@@ -136,6 +136,12 @@
     <Compile Include="FormLogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormPenjual.designer.vb">
+      <DependentUpon>FormPenjual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormPenjual.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Model1.Context.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -173,6 +179,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MyModule.vb" />
+    <Compile Include="TambahBarang.designer.vb">
+      <DependentUpon>TambahBarang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TambahBarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="transaction.vb">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -203,6 +215,12 @@
     <Compile Include="UserControlItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UserControlItem2.designer.vb">
+      <DependentUpon>UserControlItem2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlItem2.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControlTrans.Designer.vb">
       <DependentUpon>UserControlTrans.vb</DependentUpon>
     </Compile>
@@ -223,6 +241,9 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPenjual.resx">
+      <DependentUpon>FormPenjual.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -231,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyAccount.resx">
       <DependentUpon>MyAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TambahBarang.resx">
+      <DependentUpon>TambahBarang.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlAdmin.resx">
       <DependentUpon>UserControlAdmin.vb</DependentUpon>
@@ -243,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlItem.resx">
       <DependentUpon>UserControlItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlItem2.resx">
+      <DependentUpon>UserControlItem2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlTrans.resx">
       <DependentUpon>UserControlTrans.vb</DependentUpon>
@@ -300,6 +327,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.vb</LastGenOutput>
     </Content>
+    <None Include="Resources\AddImage_520px.png" />
+    <None Include="Resources\Trash.png" />
+    <None Include="Resources\Edit.png" />
     <None Include="Resources\MaleUser.png" />
     <None Include="Resources\Min.png" />
     <None Include="Resources\Plus.png" />
