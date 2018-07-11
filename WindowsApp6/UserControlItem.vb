@@ -30,10 +30,12 @@
                 _cart.resi = "Not Available"
                 db.carts.Add(_cart)
                 db.SaveChanges()
+                MessageBox.Show("Successfully Add to Cart!")
                 FormPembeli.loadListCart()
             Else
                 result.jumlah += 1
                 db.SaveChanges()
+                MessageBox.Show("Successfully Add to Cart!")
                 FormPembeli.loadListCart()
             End If
 
