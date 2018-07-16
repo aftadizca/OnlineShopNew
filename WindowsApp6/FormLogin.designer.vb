@@ -154,6 +154,7 @@ Partial Class FormLogin
         Me.passLogin.MaxLength = 32767
         Me.passLogin.Name = "passLogin"
         Me.passLogin.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
+        Me.passLogin.PromptText = "PASSWORD"
         Me.passLogin.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.passLogin.SelectedText = ""
         Me.passLogin.SelectionLength = 0
@@ -196,6 +197,7 @@ Partial Class FormLogin
         Me.emailLogin.MaxLength = 32767
         Me.emailLogin.Name = "emailLogin"
         Me.emailLogin.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.emailLogin.PromptText = "EMAIL"
         Me.emailLogin.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.emailLogin.SelectedText = ""
         Me.emailLogin.SelectionLength = 0
@@ -271,6 +273,7 @@ Partial Class FormLogin
         Me.FullnameReg.MaxLength = 32767
         Me.FullnameReg.Name = "FullnameReg"
         Me.FullnameReg.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.FullnameReg.PromptText = "FULLNAME"
         Me.FullnameReg.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.FullnameReg.SelectedText = ""
         Me.FullnameReg.SelectionLength = 0
@@ -326,6 +329,7 @@ Partial Class FormLogin
         Me.PassRepeatReg.MaxLength = 32767
         Me.PassRepeatReg.Name = "PassRepeatReg"
         Me.PassRepeatReg.PasswordChar = Global.Microsoft.VisualBasic.ChrW(35)
+        Me.PassRepeatReg.PromptText = "REPEAT PASSWORD"
         Me.PassRepeatReg.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.PassRepeatReg.SelectedText = ""
         Me.PassRepeatReg.SelectionLength = 0
@@ -362,6 +366,7 @@ Partial Class FormLogin
         Me.PassReg.MaxLength = 32767
         Me.PassReg.Name = "PassReg"
         Me.PassReg.PasswordChar = Global.Microsoft.VisualBasic.ChrW(35)
+        Me.PassReg.PromptText = "PASSWORD"
         Me.PassReg.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.PassReg.SelectedText = ""
         Me.PassReg.SelectionLength = 0
@@ -398,6 +403,7 @@ Partial Class FormLogin
         Me.EmailReg.MaxLength = 32767
         Me.EmailReg.Name = "EmailReg"
         Me.EmailReg.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.EmailReg.PromptText = "EMAIL"
         Me.EmailReg.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.EmailReg.SelectedText = ""
         Me.EmailReg.SelectionLength = 0

@@ -22,7 +22,9 @@ Partial Class FormPembeli
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -59,7 +61,8 @@ Partial Class FormPembeli
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.transFP = New System.Windows.Forms.FlowLayoutPanel()
         Me.UserControlTrans1 = New WindowsApp6.UserControlTrans()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.refresh = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.RefreshF5ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -74,6 +77,7 @@ Partial Class FormPembeli
         Me.TabPage4.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.transFP.SuspendLayout()
+        Me.refresh.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -91,6 +95,18 @@ Partial Class FormPembeli
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(880, 118)
         Me.Panel1.TabIndex = 2
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.SteelBlue
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(767, 45)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(41, 15)
+        Me.Label4.TabIndex = 9
+        Me.Label4.Text = "BUYER"
         '
         'Panel9
         '
@@ -490,26 +506,28 @@ Partial Class FormPembeli
         Me.UserControlTrans1.Size = New System.Drawing.Size(270, 158)
         Me.UserControlTrans1.TabIndex = 0
         '
-        'Label4
+        'refresh
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.SteelBlue
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(767, 45)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(41, 15)
-        Me.Label4.TabIndex = 9
-        Me.Label4.Text = "BUYER"
+        Me.refresh.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RefreshF5ToolStripMenuItem})
+        Me.refresh.Name = "refresh"
+        Me.refresh.Size = New System.Drawing.Size(137, 26)
+        '
+        'RefreshF5ToolStripMenuItem
+        '
+        Me.RefreshF5ToolStripMenuItem.Name = "RefreshF5ToolStripMenuItem"
+        Me.RefreshF5ToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.RefreshF5ToolStripMenuItem.Text = "Refresh (F5)"
         '
         'FormPembeli
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.ClientSize = New System.Drawing.Size(920, 607)
+        Me.ContextMenuStrip = Me.refresh
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel1)
         Me.DisplayHeader = False
+        Me.KeyPreview = True
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FormPembeli"
         Me.Padding = New System.Windows.Forms.Padding(20, 30, 20, 20)
@@ -532,6 +550,7 @@ Partial Class FormPembeli
         Me.TabPage4.ResumeLayout(False)
         Me.Panel7.ResumeLayout(False)
         Me.transFP.ResumeLayout(False)
+        Me.refresh.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -574,4 +593,6 @@ Partial Class FormPembeli
     Friend WithEvents MYACCOUNTToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LOGOUTToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label4 As Label
+    Friend WithEvents refresh As ContextMenuStrip
+    Friend WithEvents RefreshF5ToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -49,6 +49,7 @@
     'refresh ui
     Public Sub refreshUI()
         loadTransAdmin(filterTrans.Text)
+        flushMemory()
     End Sub
 
     Private Sub FormPembeli_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -100,5 +101,11 @@
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
 
+    End Sub
+
+    Private Sub FormAdmin_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyData = Keys.F5 Then
+            refreshUI()
+        End If
     End Sub
 End Class

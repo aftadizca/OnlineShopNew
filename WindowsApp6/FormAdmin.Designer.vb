@@ -23,6 +23,7 @@ Partial Class FormAdmin
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.UsernameDisplay = New System.Windows.Forms.ToolStripMenuItem()
@@ -36,9 +37,8 @@ Partial Class FormAdmin
         Me.filterTrans = New System.Windows.Forms.ComboBox()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.transFP = New System.Windows.Forms.FlowLayoutPanel()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.UserControlAdmin1 = New WindowsApp6.UserControlAdmin()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.TabPage4.SuspendLayout()
@@ -62,6 +62,18 @@ Partial Class FormAdmin
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(880, 118)
         Me.Panel1.TabIndex = 2
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.SteelBlue
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(761, 45)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(44, 15)
+        Me.Label3.TabIndex = 8
+        Me.Label3.Text = "ADMIN"
         '
         'Panel9
         '
@@ -192,6 +204,16 @@ Partial Class FormAdmin
         Me.transFP.Size = New System.Drawing.Size(866, 355)
         Me.transFP.TabIndex = 0
         '
+        'UserControlAdmin1
+        '
+        Me.UserControlAdmin1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.UserControlAdmin1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UserControlAdmin1.Location = New System.Drawing.Point(9, 9)
+        Me.UserControlAdmin1.Name = "UserControlAdmin1"
+        Me.UserControlAdmin1.Padding = New System.Windows.Forms.Padding(3)
+        Me.UserControlAdmin1.Size = New System.Drawing.Size(270, 239)
+        Me.UserControlAdmin1.TabIndex = 0
+        '
         'TabControl1
         '
         Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -206,28 +228,6 @@ Partial Class FormAdmin
         Me.TabControl1.Size = New System.Drawing.Size(880, 433)
         Me.TabControl1.TabIndex = 3
         '
-        'UserControlAdmin1
-        '
-        Me.UserControlAdmin1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.UserControlAdmin1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UserControlAdmin1.Location = New System.Drawing.Point(9, 9)
-        Me.UserControlAdmin1.Name = "UserControlAdmin1"
-        Me.UserControlAdmin1.Padding = New System.Windows.Forms.Padding(3)
-        Me.UserControlAdmin1.Size = New System.Drawing.Size(270, 239)
-        Me.UserControlAdmin1.TabIndex = 0
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.SteelBlue
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(761, 45)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(44, 15)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "ADMIN"
-        '
         'FormAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -236,6 +236,7 @@ Partial Class FormAdmin
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel1)
         Me.DisplayHeader = False
+        Me.KeyPreview = True
         Me.Name = "FormAdmin"
         Me.Padding = New System.Windows.Forms.Padding(20, 30, 20, 20)
         Me.Style = MetroFramework.MetroColorStyle.White

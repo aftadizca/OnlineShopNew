@@ -81,6 +81,7 @@
     Public Sub refreshUI()
         loadListItem(searchItem.Text)
         loadTrans(filterTrans.Text)
+        flushMemory()
     End Sub
 
     Private Sub FormPembeli_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -152,5 +153,11 @@
 
     Private Sub ButtonAddItem_Click(sender As Object, e As EventArgs) Handles ButtonAddItem.Click
         TambahBarang.Show()
+    End Sub
+
+    Private Sub FormPenjual_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyData = Keys.F5 Then
+            refreshUI()
+        End If
     End Sub
 End Class

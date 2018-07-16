@@ -13,6 +13,22 @@ Module MyModule
     '01 - dibatalkan user
     '02 - dibatalkan penjual
 
+    Private Declare Function SetProcessWorkingSetSize Lib "kernel32.dll" (ByVal hProcess As IntPtr, ByVal dwMinimumWorkingSetSize As Int32, ByVal dwMaximumWorkingSetSize As Int32) As Int32
+
+    Public Sub flushMemory()
+        Try
+            GC.Collect()
+            GC.WaitForPendingFinalizers()
+            If Environment.OSVersion.Platform = PlatformID.Win32NT Then
+                SetProcessWorkingSetSize(System.Diagnostics.Process.GetCurrentProcess().Handle, -1, -1)
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString())
+        End Try
+    End Sub
+
+
+
     'get status transaksi
     Public Function getStatus(ByVal key As Integer) As String
         Select Case key

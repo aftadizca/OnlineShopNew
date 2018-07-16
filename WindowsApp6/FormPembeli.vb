@@ -141,6 +141,7 @@
         loadTotalHargaCart()
         loadBill()
         loadTrans(filterTrans.Text)
+        flushMemory()
     End Sub
 
     Private Sub FormPembeli_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -218,4 +219,16 @@
         FormLogin.Show()
         Me.Hide()
     End Sub
+
+    Private Sub RefreshF5ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RefreshF5ToolStripMenuItem.Click
+        refreshUI()
+    End Sub
+
+    Private Sub FormPembeli_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyData = Keys.F5 Then
+            refreshUI()
+        End If
+    End Sub
+
+
 End Class

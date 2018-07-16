@@ -369,6 +369,7 @@ Partial Class FormPenjual
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel1)
         Me.DisplayHeader = False
+        Me.KeyPreview = True
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FormPenjual"
         Me.Padding = New System.Windows.Forms.Padding(20, 30, 20, 20)

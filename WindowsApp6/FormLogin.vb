@@ -138,4 +138,10 @@ Public Class FormLogin
     Private Sub FormLogin_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Application.Exit()
     End Sub
+
+    Private Sub passLogin_KeyDown(sender As Object, e As KeyEventArgs) Handles passLogin.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            submitLogin.PerformClick()
+        End If
+    End Sub
 End Class
